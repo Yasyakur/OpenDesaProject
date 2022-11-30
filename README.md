@@ -11,3 +11,6 @@
 4. Create User Fragment
 5. Edit User Fragment
 6. Get User Information Detail Fragment
+
+#Mockup Fitur Management User
+[Link Mockup Fitur](https://www.canva.com/design/DAFTccx2bq4/wa39LlNkKH7vFyMeqJw86w/view?utm_content=DAFTccx2bq4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
