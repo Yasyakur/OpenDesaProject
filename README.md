@@ -1,8 +1,8 @@
 # OpenDesaProject
 # Members
-Rafli Akmal Gunawan             1313620013
-Muchsin Ali Rasyidin            1313620012
-M. Yasyakur Rizkullah Noantaria 1313620032
+- Rafli Akmal Gunawan             1313620013
+- Muchsin Ali Rasyidin            1313620012
+- M. Yasyakur Rizkullah Noantaria 1313620032
 
 # Product Backlog
 1. Login Fragment
