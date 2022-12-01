@@ -12,8 +12,7 @@
 5. Edit User Fragment
 6. Get User Information Detail Fragment
 
-Link Product Backlog:
-[BackLog](https://docs.google.com/spreadsheets/d/1NWmWRfSvO3AI55iA30Wk8zO2z7B7q_CSR4Zj-dKKOwg/edit?usp=sharing)
+[Link Product BackLog](https://docs.google.com/spreadsheets/d/1NWmWRfSvO3AI55iA30Wk8zO2z7B7q_CSR4Zj-dKKOwg/edit?usp=sharing)
 
 # Mockup Fitur Management User
 [Link Mockup Fitur](https://www.canva.com/design/DAFTccx2bq4/wa39LlNkKH7vFyMeqJw86w/view?utm_content=DAFTccx2bq4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
