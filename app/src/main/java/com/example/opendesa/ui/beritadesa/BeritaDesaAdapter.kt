@@ -1,4 +1,4 @@
-package com.example.opendesa.ui.test
+package com.example.opendesa.ui.beritadesa
 
 import android.content.Intent
 import android.net.Uri

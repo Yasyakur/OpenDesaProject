@@ -1,5 +1,7 @@
 package com.example.opendesa.ui.home
 
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Button
@@ -27,9 +29,12 @@ class BeritaAdapter : ListAdapter<Berita, BeritaAdapter.BeritaViewHolder>(DiffCa
 
     override fun onBindViewHolder(holder: BeritaViewHolder, position: Int) {
         val berita = getItem(position)
+        val context = holder.itemView.context
         holder.bind(berita)
         holder.button.setOnClickListener {
-
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse(berita.link)
+            context.startActivity(intent)
         }
     }
 

@@ -20,7 +20,7 @@
             android:layout_height="200dp"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/desa" />
+            app:imgBeritaHome="@{beritaHome.image}"/>
 
         <TextView
             android:id="@+id/title_berita"
@@ -32,11 +32,23 @@
             tools:text="Judul"/>
 
         <TextView
+            android:id="@+id/date_berita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:drawableLeft="@drawable/ic_date"
+            app:dateBeritaHome='@{beritaHome.date}'
+            android:gravity="center_vertical"
+            tools:text="Date"/>
+
+        <TextView
             android:id="@+id/author_berita"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="10sp"
-            android:text='@{beritaHome.date + " | " + beritaHome.author}'
+            android:drawableLeft="@drawable/ic_author"
+            android:text='@{beritaHome.author}'
+            android:gravity="center_vertical"
             tools:text="Author"/>
 
         <TextView
@@ -49,7 +61,6 @@
 
         <Button
             android:id="@+id/button_selengkapnya"
-            android:layout_marginRight="240dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Selengkapnya"

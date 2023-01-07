@@ -13,7 +13,7 @@
 
     <fragment
         android:id="@+id/nav_berita_desa"
-        android:name="com.example.opendesa.ui.test.BeritaDesaFragment"
+        android:name="com.example.opendesa.ui.beritadesa.BeritaDesaFragment"
         android:label="Berita Desa"
         tools:layout="@layout/fragment_berita_desa" />
 

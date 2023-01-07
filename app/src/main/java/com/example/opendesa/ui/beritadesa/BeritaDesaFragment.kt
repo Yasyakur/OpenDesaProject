@@ -1,4 +1,4 @@
-package com.example.opendesa.ui.test
+package com.example.opendesa.ui.beritadesa
 
 import android.os.Bundle
 import android.util.Log
