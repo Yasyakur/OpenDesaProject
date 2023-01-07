@@ -1,7 +1,6 @@
 package com.example.opendesa
 
 import android.os.Build
-import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
@@ -12,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.opendesa.model.Berita
 import com.example.opendesa.ui.home.BeritaAdapter
+import com.example.opendesa.ui.test.BeritaDesaAdapter
 import com.example.opendesa.ui.home.BeritaApiStatus
 import java.time.Instant
 import java.time.OffsetDateTime
@@ -24,6 +24,12 @@ import java.util.regex.Pattern
 @BindingAdapter("listData")
 fun bindRecyclerView(recyclerView: RecyclerView, data: List<Berita>?) {
     val adapter = recyclerView.adapter as BeritaAdapter
+    adapter.submitList(data)
+}
+
+@BindingAdapter("listBeritaDesa")
+fun bundRecyclerView(recyclerView: RecyclerView, data: List<Berita>?) {
+    val adapter = recyclerView.adapter as BeritaDesaAdapter
     adapter.submitList(data)
 }
 
@@ -45,7 +51,7 @@ fun bindBeritaStatus(statusImageView: ImageView, status: BeritaApiStatus) {
 }
 
 @BindingAdapter("imgBeritaHome")
-fun bindImgBeritaHome(imgView: ImageView, imgUrl: String?){
+fun bindImgBeritaHome(imgView: ImageView, imgUrl: String?) {
     val imgRegex = "(?i)<img[^>]+?src\\s*=\\s*['\"]([^'\"]+)['\"][^>]*>"
 
     val p: Pattern = Pattern.compile(imgRegex)
@@ -53,7 +59,7 @@ fun bindImgBeritaHome(imgView: ImageView, imgUrl: String?){
 
     while (m.find()) {
         var imgSrc: String = m.group(1)
-        imgUrl?.let{
+        imgUrl?.let {
             val imgUri = imgSrc.toUri().buildUpon().scheme("https").build()
             imgView.load(imgUri) {
                 placeholder(R.drawable.loading_animation)
@@ -63,9 +69,28 @@ fun bindImgBeritaHome(imgView: ImageView, imgUrl: String?){
     }
 }
 
+@BindingAdapter("imgBeritaDesa")
+fun bundImgBeritaDesa(imgView: ImageView, imgUrl: String?){
+    val imgRegex = "(?i)<img[^>]+?src\\s*=\\s*['\"]([^'\"]+)['\"][^>]*>"
+    val ptr: Pattern = Pattern.compile(imgRegex)
+    val mtc: Matcher = ptr.matcher(imgUrl)
+
+    while (mtc.find()){
+        var imgSrcc: String = mtc.group(1)
+        imgUrl?.let {
+            val imgUri = imgSrcc.toUri().buildUpon().scheme("https").build()
+            imgView.load(imgUri) {
+                placeholder(R.drawable.loading_animation)
+                error(R.drawable.ic_connection_error)
+            }
+        }
+    }
+
+}
+
 @RequiresApi(Build.VERSION_CODES.O)
 @BindingAdapter("dateBeritaHome")
-fun bindDateBeritaHome(textView: TextView, date: String?){
+fun bindDateBeritaHome(textView: TextView, date: String?) {
     val timeFormatter: DateTimeFormatter = DateTimeFormatter.ISO_DATE_TIME
 
     val offsetDateTime: OffsetDateTime =

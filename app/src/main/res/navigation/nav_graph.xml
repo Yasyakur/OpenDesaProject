@@ -13,14 +13,14 @@
 
     <fragment
         android:id="@+id/nav_berita_desa"
-        android:name="com.example.opendesa.ui.test.TestFragment"
+        android:name="com.example.opendesa.ui.test.BeritaDesaFragment"
         android:label="Berita Desa"
-        tools:layout="@layout/fragment_test" />
+        tools:layout="@layout/fragment_berita_desa" />
+
     <fragment
         android:id="@+id/nav_data_desa"
         android:name="com.example.opendesa.ui.datadesa.DataDesaFragment"
         android:label="@string/data_desa" />
-
 
     <fragment
         android:id="@+id/nav_potensiFragment"
@@ -51,6 +51,4 @@
             android:name="currentPotensi"
             app:argType="com.example.opendesa.ui.potensi.data.Data" />
     </fragment>
-
-
 </navigation>
