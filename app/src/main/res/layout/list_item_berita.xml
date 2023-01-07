@@ -15,12 +15,12 @@
 
         <ImageView
             android:id="@+id/ArticleImage"
-            android:layout_width="195dp"
-            android:layout_height="154dp"
+            android:layout_width="186dp"
+            android:layout_height="127dp"
             android:scaleType="centerCrop"
+            app:imgBeritaDesa="@{beritaDesa.image}"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:imgBeritaDesa="@{beritaDesa.image}" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tvSource"
@@ -28,7 +28,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@{beritaDesa.author}"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ArticleImage" />
 
@@ -41,6 +43,7 @@
             android:maxLines="3"
             android:text="@{beritaDesa.title}"
             android:textColor="@color/title_blue"
+            android:layout_marginBottom="5dp"
             android:textStyle="bold"
             android:textSize="15sp"
             app:layout_constraintRight_toRightOf="parent"
@@ -52,12 +55,15 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="4dp"
             android:ellipsize="end"
             android:maxLines="5"
+            android:paddingTop="3sp"
+            android:textSize="12sp"
             android:text="@{beritaDesa.description}"
             android:textColor="@android:color/black"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/ArticleImage"
             app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
 
@@ -65,9 +71,11 @@
             android:id="@+id/tvPublishedAt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="9.5dp"
             android:layout_marginTop="8dp"
             android:text='@{beritaDesa.date + " | " + beritaDesa.nama_desa}'
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/darker_gray"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvSource" />
 
@@ -78,12 +86,12 @@
             android:layout_marginTop="4dp"
             android:layout_marginEnd="4dp"
             android:text="Selengkapnya"
+            android:textAllCaps="false"
             android:textSize="10sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvDescription"
-            app:layout_constraintVertical_bias="1.0"
-            android:textAllCaps="false"/>
+            app:layout_constraintVertical_bias="1.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
