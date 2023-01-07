@@ -3,10 +3,34 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< HEAD
+        <entry key="..\:/DATA KULIAH/SEM 5 ILKOM/MOBCOM/Potensi Desa/OpenDesaProjectTeam7/app/src/main/res/drawable/rounded_btn.xml" value="0.1" />
+        <entry key="..\:/DATA KULIAH/SEM 5 ILKOM/MOBCOM/Potensi Desa/OpenDesaProjectTeam7/app/src/main/res/drawable/rounded_img.xml" value="0.1" />
+        <entry key="..\:/DATA KULIAH/SEM 5 ILKOM/MOBCOM/Potensi Desa/OpenDesaProjectTeam7/app/src/main/res/font/fontinter.xml" value="0.1" />
         <entry key="..\:/DATA KULIAH/SEM 5 ILKOM/MOBCOM/Potensi Desa/OpenDesaProjectTeam7/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/DATA KULIAH/SEM 5 ILKOM/MOBCOM/Potensi Desa/OpenDesaProjectTeam7/app/src/main/res/layout/fragment_potensi.xml" value="0.1" />
         <entry key="..\:/DATA KULIAH/SEM 5 ILKOM/MOBCOM/Potensi Desa/OpenDesaProjectTeam7/app/src/main/res/layout/fragment_potensi_detail.xml" value="0.1" />
         <entry key="..\:/DATA KULIAH/SEM 5 ILKOM/MOBCOM/Potensi Desa/OpenDesaProjectTeam7/app/src/main/res/layout/list_potensi.xml" value="0.1" />
+=======
+        <entry key="..\:/Bebe/android-app/OpenDesaProject/app/src/main/res/layout/activity_main.xml" value="0.16983695652173914" />
+        <entry key="..\:/Bebe/android-app/OpenDesaProject/app/src/main/res/layout/desa_list_item.xml" value="0.16983695652173914" />
+        <entry key="..\:/Bebe/android-app/OpenDesaProject/app/src/main/res/layout/fragment_data_desa.xml" value="0.16983695652173914" />
+        <entry key="..\:/Bebe/android-app/OpenDesaProject/app/src/main/res/layout/fragment_home.xml" value="0.16983695652173914" />
+        <entry key="..\:/Bebe/android-app/OpenDesaProject/app/src/main/res/layout/fragment_test.xml" value="0.16983695652173914" />
+        <entry key="..\:/Bebe/android-app/OpenDesaProject/app/src/main/res/layout/nav_header.xml" value="0.16983695652173914" />
+        <entry key="..\:/Bebe/android-app/OpenDesaProject/app/src/main/res/layout/popup_detail_desa.xml" value="0.33" />
+        <entry key="..\:/Bebe/android-app/OpenDesaProject/app/src/main/res/menu/nav_menu.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/alfit/AndroidStudioProjects/OpenDesa/OpenDesaProject/app/src/main/res/drawable/border_circle.xml" value="0.1615" />
+        <entry key="..\:/Users/alfit/AndroidStudioProjects/OpenDesa/OpenDesaProject/app/src/main/res/drawable/ic_bubble_chat.xml" value="0.1615" />
+        <entry key="..\:/Users/alfit/AndroidStudioProjects/OpenDesa/OpenDesaProject/app/src/main/res/drawable/ic_panah.xml" value="0.2075" />
+        <entry key="..\:/Users/alfit/AndroidStudioProjects/OpenDesa/OpenDesaProject/app/src/main/res/drawable/rounded_border.xml" value="0.1615" />
+        <entry key="..\:/Users/alfit/AndroidStudioProjects/OpenDesa/OpenDesaProject/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/alfit/AndroidStudioProjects/OpenDesa/OpenDesaProject/app/src/main/res/layout/desa_list_item.xml" value="0.33" />
+        <entry key="..\:/Users/alfit/AndroidStudioProjects/OpenDesa/OpenDesaProject/app/src/main/res/layout/fragment_data_desa.xml" value="0.33" />
+        <entry key="..\:/Users/alfit/AndroidStudioProjects/OpenDesa/OpenDesaProject/app/src/main/res/layout/fragment_home.xml" value="0.2" />
+        <entry key="..\:/Users/alfit/AndroidStudioProjects/OpenDesa/OpenDesaProject/app/src/main/res/layout/fragment_test.xml" value="0.2" />
+        <entry key="..\:/Users/alfit/AndroidStudioProjects/OpenDesa/OpenDesaProject/app/src/main/res/layout/popup_detail_desa.xml" value="0.22" />
+>>>>>>> pr4
       </map>
     </option>
   </component>

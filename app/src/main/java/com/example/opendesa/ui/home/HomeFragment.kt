@@ -22,10 +22,6 @@ class HomeFragment : Fragment() {
         val viewModelFactory = HomeViewModelFactory(repository)
         beritaViewModel = ViewModelProvider(this, viewModelFactory)[HomeViewModel::class.java]
         beritaViewModel.getBeritaKecamatan()
-        beritaViewModel.berita.observe(this, Observer { response ->
-            Log.d("RESPONSE", response[0].title)
-            Log.d("RESPONSE", response[1].title)
-        })
     }
 
     override fun onCreateView(
@@ -46,6 +42,7 @@ class HomeFragment : Fragment() {
         binding.submitIdKeluhan.setOnClickListener {
             getIdValue()
         }
+
     }
 
     override fun onDestroyView() {

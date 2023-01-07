@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="8dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:paddingVertical="10dp"
+            android:text="DETAIL DESA"
+            android:letterSpacing="0.2"
+            android:textAlignment="center"
+            android:background="#E9ECEF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:height="3dp"
+            android:background="@drawable/rounded_border"/>
+
+        <TableRow>
+            <TextView
+                android:layout_width="130dp"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="8dp"
+                android:text="Kode Desa"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:background="#C9DDF1"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/tv_kode_desa"
+                android:layout_width="179dp"
+                android:layout_marginStart="3dp"
+                android:text="123.2020"
+                android:textSize="15sp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="8dp"
+                android:background="#C9DDF1"
+                android:textColor="@color/black"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="2dp">
+            <TextView
+                android:layout_width="130dp"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="8dp"
+                android:text="Nama Desa"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:background="#C9DDF1"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/tv_nama_desa"
+                android:layout_width="179dp"
+                android:layout_marginStart="3dp"
+                android:text="Tanah Haluan"
+                android:textSize="15sp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="8dp"
+                android:background="#C9DDF1"
+                android:textColor="@color/black"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="2dp">
+            <TextView
+                android:layout_width="130dp"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="8dp"
+                android:text="Website"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:background="#C9DDF1"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/tv_web_desa"
+                android:layout_width="179dp"
+                android:layout_marginStart="3dp"
+                android:text="www.tanahhaluan.com"
+                android:textSize="15sp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="8dp"
+                android:background="#C9DDF1"
+                android:textColor="@color/black"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="2dp">
+            <TextView
+                android:layout_width="130dp"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="8dp"
+                android:text="Luas Wilayah"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:background="#C9DDF1"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/tv_luas_desa"
+                android:layout_width="179dp"
+                android:layout_marginStart="3dp"
+                android:text="120 m2"
+                android:textSize="15sp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="8dp"
+                android:background="#C9DDF1"
+                android:textColor="@color/black"
+                />
+        </TableRow>
+    </TableLayout>
+</FrameLayout>
