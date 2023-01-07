@@ -1,5 +1,7 @@
 package com.example.opendesa.ui.test
 
+import android.content.Intent
+import android.net.Uri
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -7,10 +9,9 @@ import android.widget.Button
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.opendesa.databinding.ListBeritaBinding
 import com.example.opendesa.databinding.ListItemBeritaBinding
 import com.example.opendesa.model.Berita
-import kotlinx.coroutines.NonDisposableHandle.parent
+
 
 class BeritaDesaAdapter: ListAdapter<Berita, BeritaDesaAdapter.BeritaDesaViewHolder>(DiffCallback){
     class BeritaDesaViewHolder(private var binding: ListItemBeritaBinding) : RecyclerView.ViewHolder(binding.root) {
@@ -32,9 +33,14 @@ class BeritaDesaAdapter: ListAdapter<Berita, BeritaDesaAdapter.BeritaDesaViewHol
 
     override fun onBindViewHolder(holder:BeritaDesaViewHolder, position: Int) {
         val berita = getItem(position)
+        val context = holder.itemView.context
         holder.bind(berita)
         holder.button.setOnClickListener {
-            Log.d("String", berita.link)
+//            Log.d("String", berita.link)
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.setData(Uri.parse(berita.link))
+            context.startActivity(intent)
+
         }
     }
 
