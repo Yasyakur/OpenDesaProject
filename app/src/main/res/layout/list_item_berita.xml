@@ -27,6 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:drawableLeft="@drawable/ic_author"
             android:text="@{beritaDesa.author}"
             android:textColor="@android:color/darker_gray"
             android:textSize="14sp"
@@ -74,6 +75,7 @@
             android:textStyle="bold"
             android:textSize="9.5dp"
             android:layout_marginTop="8dp"
+            android:drawableLeft="@drawable/ic_date"
             android:text='@{beritaDesa.date + " | " + beritaDesa.nama_desa}'
             android:textColor="@android:color/darker_gray"
             app:layout_constraintStart_toStartOf="parent"
