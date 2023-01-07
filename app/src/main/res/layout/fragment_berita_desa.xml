@@ -7,13 +7,13 @@
     <data>
         <variable
             name="beritaDesaViewModel"
-            type="com.example.opendesa.ui.test.BeritaDesaViewModel" />
+            type="com.example.opendesa.ui.beritadesa.BeritaDesaViewModel" />
     </data>
 
         <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.test.BeritaDesaFragment">
+        tools:context=".ui.beritadesa.BeritaDesaFragment">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/news_recycler_view"

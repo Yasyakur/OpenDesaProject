@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.opendesa.model.Berita
 import com.example.opendesa.ui.home.BeritaAdapter
-import com.example.opendesa.ui.test.BeritaDesaAdapter
+import com.example.opendesa.ui.beritadesa.BeritaDesaAdapter
 import com.example.opendesa.ui.home.BeritaApiStatus
 import java.time.Instant
 import java.time.OffsetDateTime
