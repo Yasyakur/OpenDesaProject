@@ -2,7 +2,6 @@ package com.example.opendesa.ui.test
 
 import android.content.Intent
 import android.net.Uri
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Button
@@ -36,7 +35,6 @@ class BeritaDesaAdapter: ListAdapter<Berita, BeritaDesaAdapter.BeritaDesaViewHol
         val context = holder.itemView.context
         holder.bind(berita)
         holder.button.setOnClickListener {
-//            Log.d("String", berita.link)
             val intent = Intent(Intent.ACTION_VIEW)
             intent.setData(Uri.parse(berita.link))
             context.startActivity(intent)

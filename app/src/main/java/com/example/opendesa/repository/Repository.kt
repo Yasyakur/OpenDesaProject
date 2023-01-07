@@ -8,4 +8,8 @@ class Repository {
     suspend fun getBerita(): List<List<Berita>> {
         return RetrofitInstance.api.getBerita()
     }
+
+    suspend fun getSearch(): List<List<Berita>> {
+        return RetrofitInstance.api.getSearch()
+    }
 }
