@@ -26,14 +26,15 @@
             android:id="@+id/tvSource"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:drawableLeft="@drawable/ic_author"
             android:text="@{beritaDesa.author}"
-            android:textColor="@android:color/darker_gray"
-            android:textSize="14sp"
+            android:textSize="12sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ArticleImage" />
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@+id/ArticleImage"
+            tools:text="Penulis" />
 
         <TextView
             android:id="@+id/tvTitle"
@@ -62,7 +63,6 @@
             android:paddingTop="3sp"
             android:textSize="12sp"
             android:text="@{beritaDesa.description}"
-            android:textColor="@android:color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/ArticleImage"
@@ -73,13 +73,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:textSize="9.5dp"
-            android:layout_marginTop="8dp"
+            android:textSize="10dp"
+            android:layout_marginTop="4dp"
             android:drawableLeft="@drawable/ic_date"
-            android:text='@{beritaDesa.date + " | " + beritaDesa.nama_desa}'
-            android:textColor="@android:color/darker_gray"
+            app:dateBeritaDesa='@{beritaDesa.date}'
+            android:gravity="center_vertical"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvSource" />
+            app:layout_constraintTop_toBottomOf="@+id/tvSource"
+            tools:text="DATE"/>
 
         <Button
             android:id="@+id/button_detail"
