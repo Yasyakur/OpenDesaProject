@@ -72,7 +72,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tvSource" />
 
         <Button
-            android:id="@+id/button_selengkapnya"
+            android:id="@+id/button_detail"
             android:layout_width="157dp"
             android:layout_height="47dp"
             android:layout_marginTop="4dp"
