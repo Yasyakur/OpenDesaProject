@@ -9,11 +9,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.opendesa.databinding.FragmentBeritaDesaBinding
-import com.example.opendesa.databinding.FragmentHomeBinding
 import com.example.opendesa.repository.Repository
-import com.example.opendesa.ui.home.BeritaAdapter
-import com.example.opendesa.ui.home.HomeViewModel
-import com.example.opendesa.ui.home.HomeViewModelFactory
 
 
 class BeritaDesaFragment : Fragment() {
