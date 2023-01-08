@@ -12,7 +12,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.opendesa"
-        minSdk 21
+        minSdk 26
         targetSdk 32
         versionCode 1
         versionName "1.0"
@@ -72,6 +72,8 @@ dependencies {
     //file picker and downloader
     implementation 'com.mindorks.android:prdownloader:0.6.0'
 
-}
+    //Coil
+    implementation "io.coil-kt:coil:2.2.2"
+
 
 
