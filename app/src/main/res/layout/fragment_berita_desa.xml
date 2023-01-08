@@ -16,7 +16,7 @@
         tools:context=".ui.beritadesa.BeritaDesaFragment">
 
             <androidx.appcompat.widget.SearchView
-                android:id="@+id/country_search"
+                android:id="@+id/berita_search"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:defaultQueryHint="Cari berita disini..."
@@ -34,11 +34,11 @@
                 android:clipToPadding="false"
                 android:paddingBottom="50dp"
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                app:layout_constraintBottom_toBottomOf="@id/country_search"
-                app:layout_constraintEnd_toEndOf="@id/country_search"
+                app:layout_constraintBottom_toBottomOf="@id/berita_search"
+                app:layout_constraintEnd_toEndOf="@id/berita_search"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@id/country_search"
-                app:layout_constraintTop_toTopOf="@+id/country_search"
+                app:layout_constraintStart_toStartOf="@id/berita_search"
+                app:layout_constraintTop_toTopOf="@+id/berita_search"
                 app:layout_constraintVertical_bias="0.0"
                 app:listBeritaDesa="@{beritaDesaViewModel.beritaDesa}" />
 
