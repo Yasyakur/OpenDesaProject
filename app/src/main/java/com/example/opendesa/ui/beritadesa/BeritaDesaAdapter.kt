@@ -1,4 +1,4 @@
-package com.example.opendesa.ui.home
+package com.example.opendesa.ui.beritadesa
 
 import android.content.Intent
 import android.net.Uri
@@ -8,33 +8,38 @@ import android.widget.Button
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.opendesa.databinding.ListBeritaBinding
+import com.example.opendesa.databinding.ListItemBeritaBinding
 import com.example.opendesa.model.Berita
 
-class BeritaAdapter : ListAdapter<Berita, BeritaAdapter.BeritaViewHolder>(DiffCallback){
-    class BeritaViewHolder(private var binding: ListBeritaBinding) : RecyclerView.ViewHolder(binding.root) {
+
+class BeritaDesaAdapter: ListAdapter<Berita, BeritaDesaAdapter.BeritaDesaViewHolder>(DiffCallback){
+    class BeritaDesaViewHolder(private var binding: ListItemBeritaBinding) : RecyclerView.ViewHolder(binding.root) {
         lateinit var button: Button
         fun bind(berita: Berita) {
-            binding.beritaHome = berita
-            button = binding.buttonSelengkapnya
+            binding.beritaDesa = berita
+            button = binding.buttonDetail
             binding.executePendingBindings()
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BeritaViewHolder {
-        return BeritaViewHolder(ListBeritaBinding.inflate(
-            LayoutInflater.from(parent.context)
-        ))
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):BeritaDesaViewHolder{
+        return BeritaDesaViewHolder(
+            ListItemBeritaBinding.inflate(
+                LayoutInflater.from(parent.context)
+            )
+        )
     }
 
-    override fun onBindViewHolder(holder: BeritaViewHolder, position: Int) {
+    override fun onBindViewHolder(holder:BeritaDesaViewHolder, position: Int) {
         val berita = getItem(position)
         val context = holder.itemView.context
         holder.bind(berita)
         holder.button.setOnClickListener {
+//            Log.d("String", berita.link)
             val intent = Intent(Intent.ACTION_VIEW)
-            intent.data = Uri.parse(berita.link)
+            intent.setData(Uri.parse(berita.link))
             context.startActivity(intent)
+
         }
     }
 
