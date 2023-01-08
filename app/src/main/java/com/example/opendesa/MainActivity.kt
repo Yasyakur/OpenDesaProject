@@ -11,6 +11,8 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.downloader.PRDownloader
+import com.downloader.PRDownloaderConfig
 import com.example.opendesa.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationView
 
@@ -22,6 +24,11 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val config = PRDownloaderConfig.newBuilder()
+            .setDatabaseEnabled(true)
+            .build()
+
+        PRDownloader.initialize(this,config)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -37,7 +44,10 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_beranda,
                 R.id.nav_berita_desa,
                 R.id.nav_potensiFragment,
-                R.id.nav_data_desa
+                R.id.nav_data_desa,
+                R.id.nav_dokumen,
+                R.id.nav_prosedur,
+                R.id.nav_regulasi
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
