@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <item
+        android:id="@+id/nav_beranda"
+        android:title="Beranda"/>
+
+    <item
+        android:id="@+id/nav_berita_desa"
+        android:title="Berita Desa"/>
+
+    <item
+        android:id="@+id/nav_potensiFragment"
+        android:title="Potensi"/>
+
+    <item android:title="Profil">
+        <menu>
+            <item
+                android:id="@+id/nav_sejarah"
+                android:title="Sejarah"/>
+            <item
+                android:id="@+id/nav_geo"
+                android:title="Letak Geografis"/>
+            <item
+                android:id="@+id/nav_sp"
+                android:title="Struktur Pemerintahan"/>
+            <item
+                android:id="@+id/nav_vm"
+                android:title="Visi &amp; Misi"/>
+
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/nav_data_desa"
+        android:title="Desa"/>
+
+    <item android:title="Unduhan">
+        <menu>
+            <item
+                android:id="@+id/nav_prosedur"
+                android:title="Prosedur"/>
+            <item
+                android:id="@+id/nav_regulasi"
+                android:title="Regulasi"/>
+            <item
+                android:id="@+id/nav_dokumen"
+                android:title="Dokumen"/>
+        </menu>
+    </item>
+</menu>

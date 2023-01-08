@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="beritaHome"
+            type="com.example.opendesa.model.Berita" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/berita_card"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/desa" />
+
+        <TextView
+            android:id="@+id/title_berita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{beritaHome.title}"
+            android:textColor="@color/title_blue"
+            android:textStyle="bold"
+            tools:text="Judul"/>
+        <TextView
+            android:id="@+id/author_berita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:text='@{beritaHome.date + " | " + beritaHome.author}'
+            tools:text="Author"/>
+        <TextView
+            android:id="@+id/description_berita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{beritaHome.description}"
+            android:textSize="10sp"
+            tools:text="Deskripsi"/>
+        <Button
+            android:id="@+id/button_selengkapnya"
+            android:layout_marginRight="240dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selengkapnya"
+            android:backgroundTint="@color/sky_blue"
+            android:textAllCaps="false"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginBottom="16dp"/>
+
+    </LinearLayout>
+</layout>

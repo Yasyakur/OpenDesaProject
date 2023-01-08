@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="beritaViewModel"
+            type="com.example.opendesa.ui.home.HomeViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.home.HomeFragment">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/desa" />
+
+            <TextView
+                android:id="@+id/header_berita"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="12dp"
+                android:background="@color/dark_blue"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"
+                android:text="Berita Kecamatan"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+            <FrameLayout
+                android:id="@+id/berita_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                app:layout_constraintTop_toBottomOf="@id/header_berita">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/berita_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:scrollbars="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:listData="@{beritaViewModel.berita}"/>
+
+                <ImageView
+                    android:id="@+id/status_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:beritaApiStatus="@{beritaViewModel.status}" />
+
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/image_camat"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                android:layout_marginHorizontal="12dp"
+                app:layout_constraintTop_toBottomOf="@id/berita_container"
+                android:src="@drawable/camat"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/label_camat"
+                android:padding="8dp"
+                android:layout_marginHorizontal="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/image_camat"
+                android:background="@color/sky_blue">
+                <TextView
+                    android:id="@+id/camat_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:text="Pak Camat"/>
+                <TextView
+                    android:id="@+id/kecamatan_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:text="Camat Gading Rejo"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/header_sikema"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/sky_blue"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="12dp"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"
+                android:text="SIKEMA"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                app:layout_constraintTop_toBottomOf="@id/label_camat"
+                tools:layout_editor_absoluteX="-16dp" />
+
+            <FrameLayout
+                android:id="@+id/sikema_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:paddingVertical="16dp"
+                android:background="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/header_sikema">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="12dp"
+                    android:stretchColumns="1">
+
+                    <TableRow>
+
+                        <Button
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/orange"
+                            android:textAllCaps="false"
+                            android:drawableLeft="@drawable/ic_send"
+                            android:text="Kirim Keluhan"/>
+
+                    </TableRow>
+
+                    <TableRow>
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/sky_blue"
+                            android:layout_marginTop="8dp"
+                            android:layout_weight="1">
+
+                            <TableLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TableRow
+                                    android:paddingVertical="6dp">
+                                    <TextView
+                                        android:layout_weight="1"
+                                        android:layout_marginLeft="16dp"
+                                        android:text="Lacak Keluhan Anda"
+                                        android:textColor="@color/white"
+                                        android:textStyle="bold"
+                                        android:drawableLeft="@drawable/ic_send"/>
+                                </TableRow>
+
+                                <TableRow android:padding="8dp">
+                                    <EditText
+                                        android:id="@+id/input_id_keluhan"
+                                        android:layout_weight="1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:padding="0dp"
+                                        android:layout_margin="0dp"
+                                        android:hint="Tracking ID Keluhan Anda"
+                                        android:background="@color/white"/>
+                                    <Button
+                                        android:id="@+id/submit_id_keluhan"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:padding="0dp"
+                                        android:layout_margin="0dp"
+                                        android:layout_weight="1"
+                                        android:text="Lacak"
+                                        android:backgroundTint="@color/orange"/>
+                                </TableRow>
+
+                            </TableLayout>
+                        </FrameLayout>
+                    </TableRow>
+
+                    <TableRow>
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:elevation="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_weight="1">
+
+                            <TableLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TableRow
+                                    android:paddingVertical="6dp">
+                                    <TextView
+                                        android:layout_weight="1"
+                                        android:layout_marginLeft="16dp"
+                                        android:text="TERPOPULER"
+                                        android:textColor="@color/sky_blue"
+                                        android:textStyle="bold"
+                                        android:drawableLeft="@drawable/ic_trend"/>
+                                </TableRow>
+
+                                <TableRow android:padding="8dp">
+                                    <TextView
+                                        android:layout_weight="1"
+                                        android:layout_marginLeft="16dp"
+                                        android:text="Data tidak ditemukan"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold"
+                                        android:drawableLeft="@drawable/ic_bubble_chat"/>
+                                </TableRow>
+
+                            </TableLayout>
+                        </FrameLayout>
+                    </TableRow>
+
+                    <TableRow>
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:elevation="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_weight="1">
+
+                            <TableLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TableRow
+                                    android:paddingVertical="6dp">
+                                    <TextView
+                                        android:layout_weight="1"
+                                        android:layout_marginLeft="16dp"
+                                        android:text="KELUHAN TERJAWAB"
+                                        android:textColor="@color/sky_blue"
+                                        android:textStyle="bold"
+                                        android:drawableLeft="@drawable/ic_checked"/>
+                                </TableRow>
+
+                                <TableRow android:padding="8dp">
+                                    <TextView
+                                        android:layout_weight="1"
+                                        android:layout_marginLeft="16dp"
+                                        android:text="Data tidak ditemukan"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold"
+                                        android:drawableLeft="@drawable/ic_bubble_chat"/>
+                                </TableRow>
+                                <TableRow>
+                                    <TextView
+                                        android:layout_marginLeft="16dp"
+                                        android:id="@+id/lihat_semua"
+                                        android:text="Lihat Semua"
+                                        android:textColor="@color/sky_blue"
+                                        />
+                                </TableRow>
+
+                            </TableLayout>
+                        </FrameLayout>
+                    </TableRow>
+
+                </TableLayout>
+            </FrameLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

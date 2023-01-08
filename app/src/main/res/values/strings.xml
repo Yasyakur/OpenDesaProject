@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">OpenDesa</string>
+
+    <string name="open">Active</string>
+    <string name="close">Inactive</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="data_desa">Data Desa</string>
+
+</resources>
