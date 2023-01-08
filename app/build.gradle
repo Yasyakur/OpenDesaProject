@@ -72,7 +72,7 @@ dependencies {
 
     //file picker and downloader
     implementation 'com.mindorks.android:prdownloader:0.6.0'
-}
+
 
     //Coil
     implementation "io.coil-kt:coil:2.2.2"
