@@ -13,5 +13,6 @@
     <color name="title_blue">#FF0068C9</color>
     <color name="light_gray">#FFECF0F5</color>
     <color name="warnaActionBar">#043E73</color>
+    <color name="loadingOverlay">#6A000000</color>
 
 </resources>
