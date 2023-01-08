@@ -19,6 +19,7 @@
                 android:id="@+id/country_search"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:defaultQueryHint="Cari berita disini..."
                 android:background="@color/cardview_light_background"
                 android:textCursorDrawable="@null"
                 app:iconifiedByDefault="false"
