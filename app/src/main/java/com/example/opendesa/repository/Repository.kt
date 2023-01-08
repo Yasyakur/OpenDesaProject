@@ -9,8 +9,13 @@ class Repository {
         return RetrofitInstance.api.getBerita()
     }
 
+
     suspend fun getUnduhanData(type: String) = RetrofitInstance.api.getUnduhanList(type)
 
     suspend fun downloadFile(url: String, path: String, fileName: String) {
+
+    suspend fun getSearch(): List<List<Berita>> {
+        return RetrofitInstance.api.getSearch()
+
     }
 }

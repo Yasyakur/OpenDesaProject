@@ -15,19 +15,32 @@
         android:layout_height="match_parent"
         tools:context=".ui.beritadesa.BeritaDesaFragment">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/news_recycler_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:clipToPadding="false"
-            android:paddingBottom="50dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:listBeritaDesa="@{beritaDesaViewModel.beritaDesa}"
-            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/berita_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:defaultQueryHint="Cari berita disini..."
+                android:background="@color/cardview_light_background"
+                android:textCursorDrawable="@null"
+                app:iconifiedByDefault="false"
+                app:queryBackground="@null"
+                tools:ignore="MissingConstraints" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/news_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="50sp"
+                android:clipToPadding="false"
+                android:paddingBottom="50dp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintBottom_toBottomOf="@id/berita_search"
+                app:layout_constraintEnd_toEndOf="@id/berita_search"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/berita_search"
+                app:layout_constraintTop_toTopOf="@+id/berita_search"
+                app:layout_constraintVertical_bias="0.0"
+                app:listBeritaDesa="@{beritaDesaViewModel.beritaDesa}" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

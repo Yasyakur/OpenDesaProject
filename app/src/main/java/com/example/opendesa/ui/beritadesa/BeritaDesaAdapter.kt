@@ -35,7 +35,6 @@ class BeritaDesaAdapter: ListAdapter<Berita, BeritaDesaAdapter.BeritaDesaViewHol
         val context = holder.itemView.context
         holder.bind(berita)
         holder.button.setOnClickListener {
-//            Log.d("String", berita.link)
             val intent = Intent(Intent.ACTION_VIEW)
             intent.setData(Uri.parse(berita.link))
             context.startActivity(intent)

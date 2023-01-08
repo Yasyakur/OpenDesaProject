@@ -87,6 +87,17 @@ fun bundImgBeritaDesa(imgView: ImageView, imgUrl: String?){
     }
 
 }
+@RequiresApi(Build.VERSION_CODES.O)
+@BindingAdapter("dateBeritaDesa")
+fun bindDateBeritaDesa(textView: TextView, date: String?) {
+    val timeFormatter: DateTimeFormatter = DateTimeFormatter.ISO_DATE_TIME
+
+    val offsetDateTime: OffsetDateTime =
+        OffsetDateTime.parse(date, timeFormatter)
+
+    val dateString: Date = Date.from(Instant.from(offsetDateTime))
+    textView.text = dateString.toLocaleString()
+}
 
 @RequiresApi(Build.VERSION_CODES.O)
 @BindingAdapter("dateBeritaHome")

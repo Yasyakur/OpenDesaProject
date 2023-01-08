@@ -18,4 +18,8 @@ interface OpenDesaApi {
     @Streaming
     @GET("api/unduhan/{id}")
     suspend fun downloadFile(@Path("id") id: Int): Response<ResponseBody>
+
+    @GET("api/berita-desa/search")
+    suspend fun getSearch(): List<List<Berita>>
+
 }
