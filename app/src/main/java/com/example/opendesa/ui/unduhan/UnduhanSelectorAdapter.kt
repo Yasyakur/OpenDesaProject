@@ -35,7 +35,7 @@ class UnduhanSelectorAdapter(val listener: OnRVClickListener) :
         ) {
             binding.unduhanType.text = typeText
             if (selectedItem == position) {
-                binding.unduhanType.setBackgroundColor(Color.BLUE)
+                binding.unduhanType.setBackgroundColor(Color.parseColor("#043E73"))
                 binding.unduhanType.setTextColor(Color.WHITE)
             }else{
                 binding.unduhanType.setBackgroundColor(Color.WHITE)

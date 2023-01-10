@@ -17,6 +17,10 @@
         android:label="Berita Desa"
         tools:layout="@layout/fragment_test" />
 
+    <fragment
+        android:id="@+id/nav_data_desa"
+        android:name="com.example.opendesa.ui.datadesa.DataDesaFragment"
+        android:label="@string/data_desa" />
 
     <fragment
         android:id="@+id/nav_potensiFragment"
@@ -48,5 +52,19 @@
             app:argType="com.example.opendesa.ui.potensi.data.Data" />
     </fragment>
 
-
+    <fragment
+        android:id="@+id/nav_dokumen"
+        android:name="com.example.opendesa.ui.unduhan.UnduhanFragment"
+        android:label="Dokumen"
+        tools:layout="@layout/fragment_unduhan" />
+    <fragment
+        android:id="@+id/nav_prosedur"
+        android:name="com.example.opendesa.ui.unduhan.UnduhanFragment"
+        android:label="Prosedur"
+        tools:layout="@layout/fragment_unduhan" />
+    <fragment
+        android:id="@+id/nav_regulasi"
+        android:name="com.example.opendesa.ui.unduhan.UnduhanFragment"
+        android:label="Regulasi"
+        tools:layout="@layout/fragment_unduhan" />
 </navigation>

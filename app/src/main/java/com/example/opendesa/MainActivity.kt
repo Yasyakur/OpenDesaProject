@@ -36,7 +36,11 @@ class MainActivity : AppCompatActivity() {
             setOf(
                 R.id.nav_beranda,
                 R.id.nav_berita_desa,
-                R.id.nav_potensiFragment
+                R.id.nav_potensiFragment,
+                R.id.nav_data_desa,
+                R.id.nav_dokumen,
+                R.id.nav_prosedur,
+                R.id.nav_regulasi
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
